@@ -21,11 +21,11 @@
       run: function(platforms, fn) {
         platforms = helpers.reducePlatforms(platforms);
         return fluid(base).clean().createTree(platforms).cloneRoot().indexHtml().cloneCordova().compileConfig().custom(function(done) {
-          return base.addPlugins(plugins, function() {
+          return base.buildPlatforms(platforms, function() {
             return done();
           });
         }).custom(function(done) {
-          return base.buildPlatforms(platforms, function() {
+          return base.addPlugins(plugins, function() {
             return done();
           });
         }).go(fn);

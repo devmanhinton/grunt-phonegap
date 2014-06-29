@@ -21,7 +21,7 @@
     };
     return {
       add: function(plugins, fn) {
-        grunt.log.writeln('Adding plugins');
+        grunt.log.writeln('Adding plugins mannnn');
         return async.eachSeries(plugins, addPlugin, function(err) {
           if (fn) {
             return fn(err);

@@ -17,6 +17,6 @@ module.exports = plugin = (grunt) ->
     helpers.exec cmd, fn
 
   add: (plugins, fn) ->
-    grunt.log.writeln 'Adding plugins'
+    grunt.log.writeln 'Adding plugins mannnn'
     async.eachSeries plugins, addPlugin, (err) ->
       if fn then fn(err)
