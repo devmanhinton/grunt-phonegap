@@ -25,7 +25,7 @@ module.exports = build = (grunt) ->
       .cloneCordova()
       .compileConfig()
       .custom (done) ->
-        base.addPlugins plugins, -> done()
-      .custom (done) ->
         base.buildPlatforms platforms, -> done()
+      .custom (done) ->
+        base.addPlugins plugins, -> done()
       .go fn
