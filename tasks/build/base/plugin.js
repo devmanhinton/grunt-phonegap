@@ -16,6 +16,7 @@
       if (uri.protocol() === '' && (plugin.substr(0, 1) === '.' || plugin.substr(0, 1) === '/')) {
         plugin = path.resolve(uri.path());
       }
+      grunt.log.writeln('Look at me' + plugin + '-------------------->>>>>>>>>>');
       cmd = "phonegap local plugin add " + plugin + " " + (helpers.setVerbosity());
       return helpers.exec(cmd, fn);
     };
